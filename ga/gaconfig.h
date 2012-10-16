@@ -342,9 +342,11 @@ incorporate it into the code base.
 #endif
 
 // there are many warnings from vcpp, many of which we can safely ignore.
-//#pragma warning (disable : 4244)    // int-to-float warnings
-#pragma warning (disable : 4305)    // double-to-float warnings
-#pragma warning (disable : 4355)    // allow us to use this in constructors
+#pragma warning (disable : 4244)    // int-to-float warnings
+#pragma warning (disable : 4305)      // double-to-float warnings
+#pragma warning (disable : 4355)      // allow us to use this in constructors
+#pragma warning (disable : 4616)
+#pragma warning (disable : 4996)
 //#pragma warning (disable : 4250)    // dominated multiple inherits
 
 
