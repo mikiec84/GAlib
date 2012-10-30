@@ -1,3 +1,8 @@
+2012-10-30  Yan Ren <pemryan@gmail.com>
+	* replace classID/className implementation with RTTI. for details, please see gaid.h
+	* update comment style.
+	* add seed.c to makefile
+
 2005-01-11  Matthew Wall  <mwall@localhost.localdomain>
 
 	* graphic/gaview.C: keep gcc3 happy.

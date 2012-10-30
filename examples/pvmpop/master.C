@@ -1,14 +1,17 @@
-/* ----------------------------------------------------------------------------
-  master.C
-  mbwall 5dec95
+/**
+  @file master.C
+  @brief Example program to illustrate use of GAlib with PVM. 
+
+  @author Matthew Wall 
+  @date 5-Dec-1995
+  
   Copyright (c) 1995-1996 Massachusetts Institute of Technology
 
- DESCRIPTION:
-   Example program to illustrate use of GAlib with PVM.  This example uses a
-master-slave configuration to parallelize the genetic algorithm.  In this case,
-the master controls the evolution by specifying migrations between populations
+This example uses a master-slave configuration to parallelize the genetic algorithm.  
+In this case, the master controls the evolution by specifying migrations between populations
 on various processes.
----------------------------------------------------------------------------- */
+*/
+
 #include <stdio.h>
 #include <iostream.h>
 #include "PVMDemeGA.h"

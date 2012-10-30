@@ -1,7 +1,5 @@
-// $Header$
-/* ----------------------------------------------------------------------------
-  bin2dec.C
-  mbwall 19apr95
+/** @file GABin2DecGenome.C
+  @author Matthew Wall  19-apr-95
   Copyright (c) 1995 Massachusetts Institute of Technology
                      all rights reserved
 
@@ -9,9 +7,9 @@
   Source file for the binary-to-decimal genome.
   This is the phenotype for converting binary strings to decimal values.  There
 are limits to the size of the numbers you can use (ie you're limited to the
-number of bits that can represent a float - see the converters file for more 
+number of bits that can represent a float - see the converters file for more
 information).
----------------------------------------------------------------------------- */
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -20,13 +18,13 @@ information).
 #include <ga/GABin2DecGenome.h>
 
 
-/* ----------------------------------------------------------------------------
+/**
    Phenotype class definitions
----------------------------------------------------------------------------- */
+*/
 
 #define GA_B2D_CHUNKSIZE 20
 
-GABin2DecPhenotypeCore::GABin2DecPhenotypeCore() : 
+GABin2DecPhenotypeCore::GABin2DecPhenotypeCore() :
 csz(GA_B2D_CHUNKSIZE), n(0), N(0), sz(0) {
   nbits = oset = 0;
   minval = maxval = 0;
@@ -50,7 +48,7 @@ csz(p.csz), n(p.n), N(p.N), sz(p.sz) {
 }
 
 GABin2DecPhenotypeCore::~GABin2DecPhenotypeCore(){
-  if(cnt > 0) 
+  if(cnt > 0)
     GAErr(GA_LOC, "GABin2DecPhenotypeCore", "destructor", gaErrRefsRemain);
   delete [] nbits;
   delete [] oset;
@@ -58,7 +56,7 @@ GABin2DecPhenotypeCore::~GABin2DecPhenotypeCore(){
   delete [] maxval;
 }
 
-GABin2DecPhenotypeCore& 
+GABin2DecPhenotypeCore&
 GABin2DecPhenotypeCore::operator=(const GABin2DecPhenotypeCore& p){
   if(&p == this) return *this;
 
@@ -71,7 +69,7 @@ GABin2DecPhenotypeCore::operator=(const GABin2DecPhenotypeCore& p){
   sz = p.sz;
   N = p.N;
   csz = p.csz;
- 
+
   nbits = new unsigned short[N];
   oset = new unsigned short[N];
   minval = new float[N];
@@ -93,9 +91,9 @@ GABin2DecPhenotypeCore::operator=(const GABin2DecPhenotypeCore& p){
 
 
 
-// Add another phenotype to this phenotype object.  If needed, we allocate more
-// space, otherwise just tag the new on then end.  We allocate space in chunks
-// so we don't spend too much time doing memory allocation stuff.
+/// Add another phenotype to this phenotype object.  If needed, we allocate more
+/// space, otherwise just tag the new on then end.  We allocate space in chunks
+/// so we don't spend too much time doing memory allocation stuff.
 void
 GABin2DecPhenotype::add(unsigned int nb, float min, float max){
   if(core->n + 1 > core->N){
@@ -166,9 +164,9 @@ GABin2DecPhenotype::equal(const GABin2DecPhenotype & b) const {
 
 
 
-/* ----------------------------------------------------------------------------
+/**
    Genome class definition
----------------------------------------------------------------------------- */
+*/
 void
 GABin2DecGenome::copy(const GAGenome & orig)
 {
@@ -183,9 +181,9 @@ GABin2DecGenome::copy(const GAGenome & orig)
   }
 }
 
-// We shouldn't have to worry about our superclass's data members for the
-// attributes part here, but there is no 'copy attributes' function, so we
-// end up doing it.  bummer.
+/// We shouldn't have to worry about our superclass's data members for the
+/// attributes part here, but there is no 'copy attributes' function, so we
+/// end up doing it.  bummer.
 GAGenome *
 GABin2DecGenome::clone(GAGenome::CloneMethod flag) const {
   GABin2DecGenome *cpy = new GABin2DecGenome(*ptype);
@@ -201,9 +199,9 @@ GABin2DecGenome::clone(GAGenome::CloneMethod flag) const {
 }
 
 
-// The phenotype does reference counting, so its ok to keep our own copy of 
-// the phenotype.  So all we have to do here is copy the one that is passed
-// to us, then modify the bit string to accomodate the new mapping.
+/// The phenotype does reference counting, so its ok to keep our own copy of
+/// the phenotype.  So all we have to do here is copy the one that is passed
+/// to us, then modify the bit string to accomodate the new mapping.
 const GABin2DecPhenotype &
 GABin2DecGenome::phenotypes(const GABin2DecPhenotype & p)
 {
@@ -213,12 +211,12 @@ GABin2DecGenome::phenotypes(const GABin2DecPhenotype & p)
 }
 
 
-// We access the data string directly here.  This could be dangerous (if the
-// bitstream ever changes on us it will affect the way this method sees the
-// data string).
-//   Eventually we may need to cache the decimal values in an array of floats,
-// but for now we call the converter routine every time each phenotype is 
-// requested.
+/// We access the data string directly here.  This could be dangerous (if the
+/// bitstream ever changes on us it will affect the way this method sees the
+/// data string).
+///   Eventually we may need to cache the decimal values in an array of floats,
+/// but for now we call the converter routine every time each phenotype is
+/// requested.
 float
 GABin2DecGenome::phenotype(unsigned int n) const
 {
@@ -228,22 +226,22 @@ GABin2DecGenome::phenotype(unsigned int n) const
   }
   float val=0.0;
   decode(val,
-	 &(data[ptype->offset(n)]), ptype->length(n), 
+	 &(data[ptype->offset(n)]), ptype->length(n),
 	 ptype->min(n), ptype->max(n));
   return val;
 }
 
 
-// Set the bits of the binary string based on the decimal value that is passed
-// to us.  Notice that the number you pass may or may not be set properly.  It
-// depends on the resolution defined in the phenotype.  If you didn't define 
-// enough resolution, then there may be no way to represent the number.
-//   We round off to the closest representable value, then return the number 
-// that we actually entered (the rounded value).
-// *** this is dangerous!  we're accessing the superclass' data representation
-// directly, so if the representation changes to a bit stream, this will break.
-//   If someone tries to set the phenotype beyond the bounds, we post an error
-// then set the bits to the closer bound.
+/// Set the bits of the binary string based on the decimal value that is passed
+/// to us.  Notice that the number you pass may or may not be set properly.  It
+/// depends on the resolution defined in the phenotype.  If you didn't define
+/// enough resolution, then there may be no way to represent the number.
+///   We round off to the closest representable value, then return the number
+/// that we actually entered (the rounded value).
+/// *** this is dangerous!  we're accessing the superclass' data representation
+/// directly, so if the representation changes to a bit stream, this will break.
+///   If someone tries to set the phenotype beyond the bounds, we post an error
+/// then set the bits to the closer bound.
 float
 GABin2DecGenome::phenotype(unsigned int n, float val)
 {
@@ -263,8 +261,8 @@ GABin2DecGenome::phenotype(unsigned int n, float val)
 
 
 #ifdef GALIB_USE_STREAMS
-// Read the incoming data as a list of phenotype values.  It would be nice to
-// do this either as binary or decimal read, but oh well...  not much need.
+/// Read the incoming data as a list of phenotype values.  It would be nice to
+/// do this either as binary or decimal read, but oh well...  not much need.
 int
 GABin2DecGenome::read(STD_ISTREAM & is)
 {
@@ -279,7 +277,7 @@ GABin2DecGenome::read(STD_ISTREAM & is)
 
 
 int
-GABin2DecGenome::write(STD_OSTREAM & os) const 
+GABin2DecGenome::write(STD_OSTREAM & os) const
 {
   for(unsigned int i=0; i<phenotypes().nPhenotypes(); i++)
     os << phenotype(i) << " ";
@@ -288,9 +286,9 @@ GABin2DecGenome::write(STD_OSTREAM & os) const
 #endif
 
 
-// For two bin2dec genomes to be equal they must have the same bits AND the
-// same phenotypes.
-int 
+/// For two bin2dec genomes to be equal they must have the same bits AND the
+/// same phenotypes.
+int
 GABin2DecGenome::equal(const GAGenome& g) const {
   GABin2DecGenome & b = (GABin2DecGenome&)g;
   return((GA1DBinaryStringGenome::equal(b) && *ptype == *(b.ptype)) ?
@@ -298,7 +296,7 @@ GABin2DecGenome::equal(const GAGenome& g) const {
 }
 
 
-int 
+int
 GABin2DecGenome::notequal(const GAGenome& g) const {
   GABin2DecGenome & b = (GABin2DecGenome&)g;
   return((GA1DBinaryStringGenome::notequal(b) || *ptype != *(b.ptype)) ?

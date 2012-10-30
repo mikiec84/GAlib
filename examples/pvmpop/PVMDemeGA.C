@@ -1,11 +1,13 @@
-/* ----------------------------------------------------------------------------
-  DemeGA.C
-  mbwall 28jul94
-  Copyright (c) 1995-1996 Massachusetts Institute of Technology
-                          all rights reserved
+/** 
+  @file DemeGA.C
+  @brief Souce file for the deme-based genetic algorithm object.
 
-   Souce file for the deme-based genetic algorithm object.
----------------------------------------------------------------------------- */
+  @author Matthew Wall   
+  @date 28-Jul-1994
+  
+  Copyright (c) 1995-1996 Massachusetts Institute of Technology, all rights reserved.
+
+ */
 #include <string.h>
 #include <ga/garandom.h>
 #include "PVMDemeGA.h"

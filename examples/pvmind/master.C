@@ -1,24 +1,29 @@
-/* ----------------------------------------------------------------------------
-  master.C
-  mbwall 5dec95
+/** 
+  @file master.C
+  @author Matthew Wall 
+  @date 5-Dec-1995
+  
   Copyright (c) 1995-1996 Massachusetts Institute of Technology
 
- DESCRIPTION:
+ 
    Example program to illustrate use of GAlib with PVM.  This example uses a
 master-slave configuration to parallelize the genetic algorithm.  In this case,
 the master controls the evolution and farms out the task of evaluating single
 genomes to each of the slaves.  Initialization of each genome is also 
 distributed (in case you have a CPU-intensive initializer).
+  
   This method of parallelization is effective only if the length of time it 
 takes to evaluate a genome is longer than the time it takes to transmit the
 genome data from the master to the slave.  If this is not the case then try the
 single population per processor version of parallelization.
+  
   Be careful about mixing and matching parallel implementations and various
 GAlib components - they do *not* all interoperate as you might expect.  For 
 example, many of the default GAlib methods do a fair amount of caching, so if
 you parallelize one component without doing all the others, you might end up
 slowing everything down.
----------------------------------------------------------------------------- */
+*/
+
 #include <stdio.h>
 #include <iostream.h>
 #include <time.h>

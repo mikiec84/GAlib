@@ -1,14 +1,17 @@
-/* ----------------------------------------------------------------------------
-  genome.C
-  mbwall 5dec95
+/**
+  @file genome.C
+  @author Matthew Wall  
+  @date 5-Dec-1995
+  
   Copyright (c) 1995-1996 Massachusetts Institute of Technology
 
- DESCRIPTION:
    This file contains the information needed to evaluate an operate on a 
 genome in these examples.  We define routines for sending and receiving genome
 data as well as routines for modifying the genetic algorithm's population.
+
    At some point we should add better error checking to the pvm status returns.
----------------------------------------------------------------------------- */
+*/
+
 #include <pvm3.h>
 #include <unistd.h>
 #include "genome.h"

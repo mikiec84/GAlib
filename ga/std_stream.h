@@ -1,6 +1,8 @@
-// $Header$
-// Copyright (c) 2005 Matthew Wall, all rights reserved
-// ----------------------------------------------------------------------------
+/** @file std_stream.h 
+    @author Matthew Wall
+  Copyright (c) 2005 Matthew Wall, all rights reserved.
+*/
+
 #ifndef _ga_std_stream_h_
 #define _ga_std_stream_h_
 

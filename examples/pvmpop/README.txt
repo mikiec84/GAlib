@@ -1,4 +1,5 @@
-mbw 5dec95
+ @author Matthew Wall 
+ @date 5-Dec-1995
 
 To build the programs in this directory, use aimk (part of the PVM package).
 You should be able to simply type 'aimk' to build the programs or
@@ -25,11 +26,6 @@ configured as described in the PVM documentation (see the makefile for details)
 For more details about PVM, see 
  http://www.netlib.org/pvm3/index.html
  http://www.epm.ornl.gov/pvm/pvm_home.html
-
-
-
-
-
 
 
 OK, so you don't want to chug through the PVM documentation?  Here's the 

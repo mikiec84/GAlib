@@ -1,18 +1,23 @@
-/* ----------------------------------------------------------------------------
-  gaview.C
-  mbwall 10apr96
+/** 
+  @file gaview.C
+  @author Matthew Wall 
+  @date 10-Apr-1996
+
   Copyright (c) 1996  Massachusetts Institute of Technology
 
   Visual genetic algorithm example code.  The program pops up a single window
 with a set of buttons that control the evolution.  You can view an entire
 population or a single individual.  The program reads standard GAlib settings
 files and understands the usual GAlib command-line options.
+
   Apologies for the mix of C and C++ coding styles here, but you get the idea.
   By the way, this thing looks WAY better when you plot the functions in 3D
 (using an OpenGL widget rather than the drawing area widget, for example).
+
   You can compile this using either motif widgets or the athena widgets, 
 depending on which you have on your system.
----------------------------------------------------------------------------- */
+*/
+ 
 #include <stdio.h>
 #include <math.h>
 #include <ga/ga.h>

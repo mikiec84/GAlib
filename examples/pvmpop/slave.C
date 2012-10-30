@@ -1,19 +1,22 @@
-/* ----------------------------------------------------------------------------
-  slave.C
-  mbwall 5dec95
+/** 
+  @file slave.C
+  @author Matthew Wall  
+  @date 5-Dec-1995
+  
   Copyright (c) 1995-1996 Massachusetts Institute of Technology
 
- DESCRIPTION:
    Each slave evolves its own population.  Between steps it checks to see if
 any messages have appeared for it.  After each step it sends a message that 
 says that it has completed a generation.  A slave can receive two kinds of 
 messages, one to send individuals (and where to send them), and another to
 receive them (and from where to receive them).  The master controls the
 migrations by telling the slaves when and where to migrate individuals.  
+
    To control the actual migration algorithm, you can modify the section of
 code that merges the received individuals into the population.  You can also
 determine which individuals will be selected to migrate to another population.
----------------------------------------------------------------------------- */
+*/
+
 #include <pvm3.h>
 #include <ga/GASimpleGA.h>
 #include "genome.h"

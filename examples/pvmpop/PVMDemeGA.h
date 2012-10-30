@@ -1,21 +1,25 @@
-/* ----------------------------------------------------------------------------
-  PVMDemeGA.h
-  mbwall jan96
-  Copyright (c) 1995-1996 Massachusetts Institute of Technology
-                          all rights reserved
+/** 
+  @file PVMDemeGA.h
+  @author Matthew Wall   
+  @date Jan-1996
+  
+  Copyright (c) 1995-1996 Massachusetts Institute of Technology, all rights reserved.
 
   Header for the deme (parallel population) genetic algorithm class.
+  
   This genetic algorithm lets you specify a number of individuals to migrate
 from one population to another at the end of each generation.  You can specify
 how many populations to maintain.  Each population evolves using a steady-state
 genetic algorithm.  At the end of each generation, the specified number of 
 individuals migrate from one population to the next (we use the loop migration
 topology in this implementation).
+
   You can modify the migration method by deriving a new class from this one and
 redefine the migration method.  If you want to use a different kind of genetic
 algorithm for each population then you'll have to modify the mechanics of the
 step method.
----------------------------------------------------------------------------- */
+*/
+
 #ifndef _PVMDemeGA_h_
 #define _PVMDemeGA_h_
 

@@ -1,4 +1,5 @@
-mbw 5dec95
+ @author Matthew Wall 
+ @date 5-Dec-1995
 
 To build the programs in this directory, use aimk (part of the PVM package).
 You should be able to simply type 'aimk' to build the programs or
@@ -25,10 +26,6 @@ configured as described in the PVM documentation (see the makefile for details)
 For more details about PVM, see 
  http://www.netlib.org/pvm3/index.html
  http://www.epm.ornl.gov/pvm/pvm_home.html
-
-
-
-
 
 
 
@@ -84,15 +81,13 @@ master ngen 100 nslaves 25
    then you'll leave the pvm prompt but pvmd will still be running)
 
 
-
-
-
 IMPORTANT NOTES
   To shut down all of the processes spawned in your PVM, type 'reset' at the
 pvm prompt.  If you just control-C the master then it will die but the slaves
 will continue to run (unless you do some signal handling in the master).  Don't
 forget to 'halt' the PVM when you are finished running everything.  For help
 with PVM commands, type 'help' at the PVM prompt.
+
   To see the cout/cerr messages from your spawned (slave) processes, look in 
 the file /var/tmp/pvml.XXXXXX where XXXXXX is your uid.  On some systems the
 pvm log file may be located in /tmp/pvml.XXXXXX

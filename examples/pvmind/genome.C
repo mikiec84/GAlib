@@ -1,12 +1,14 @@
-/* ----------------------------------------------------------------------------
-  genome.C
-  mbwall 5dec95
+/** 
+  @file genome.C
+  @author Matthew Wall  
+  @date 5-Dec-1995
+  
   Copyright (c) 1995-1996 Massachusetts Institute of Technology
 
- DESCRIPTION:
    This file contains the information needed to evaluate an operate on a 
 genome in these examples.
----------------------------------------------------------------------------- */
+*/
+ 
 #include <pvm3.h>
 #include <unistd.h>
 #include "genome.h"

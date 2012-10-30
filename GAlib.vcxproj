@@ -39,6 +39,7 @@
     <NMakeCleanCommandLine>nmake /nologo /f makefile.vcpp clean</NMakeCleanCommandLine>
     <NMakeReBuildCommandLine>echo ‘clean and build’</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <IncludePath>D:\WorkSpace\GA\galib247;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeBuildCommandLine>nmake /nologo /f Makefile.vcpp</NMakeBuildCommandLine>

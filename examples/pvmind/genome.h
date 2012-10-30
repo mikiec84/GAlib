@@ -1,12 +1,14 @@
-/* ----------------------------------------------------------------------------
-  genome.h
-  mbwall 5dec95
+/** 
+  @file genome.h
+  @author Matthew Wall 
+  @date   5-Dec-1995
+
   Copyright (c) 1995-1996 Massachusetts Institute of Technology
 
- DESCRIPTION:
    This file contains the information needed to evaluate an operate on a 
 genome in these examples.
----------------------------------------------------------------------------- */
+*/
+
 #ifndef _genome_h_
 #define _genome_h_
 

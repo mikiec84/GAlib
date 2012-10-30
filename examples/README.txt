@@ -1,5 +1,6 @@
-GAlib examples
-mbw 5jan96
+== GAlib examples ==
+ @author mbw 
+ @date 5-Jan-1996
 
 How to compile the examples
 -------------------------------------------------------------------------------

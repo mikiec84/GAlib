@@ -1,3 +1,14 @@
+2012-10-30 Yan Ren <pemryan@gmail.com>
+    * replaced GAID's classID/className implementation with RTTI.
+
+	This is done with minial revision to original code.
+    in gaid.h 
+    add : include <typeinfo>
+    add:  className() and sameClass() are replaed with type_info's impl.
+    remove: macro GADeclareIdentity(), GADefineIdentity(name, id), GADefineIdentitySRC(clss,name,id) are removed.
+    remove: classID() is removed since it not used.
+    remove: GADefineIdentity(name, id) in other class defination header files. 
+ 
 2005-01-27  Matthew Wall  <mwall@gouda.local>
 
 	* gaconfig.h: added instantiation prefix for compilers that need 
