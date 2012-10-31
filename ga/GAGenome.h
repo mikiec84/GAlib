@@ -1,6 +1,8 @@
-/** @file GAGenome.h
+/** 
+    @file GAGenome.h
 	@brief defines the genome interface.
-    @author Matthew Wall  
+    
+	@author Matthew Wall  
 	@date 28-Jul-1994
 
 	Copyright (c) 1995 Massachusetts Institute of Technology
@@ -16,11 +18,11 @@ it should operate on the data.  See comments below for further details.
 #ifndef _ga_genome_h_
 #define _ga_genome_h_
 
+#include <iostream>
 #include <ga/gaid.h>
 #include <ga/gaconfig.h>
 #include <ga/gaerror.h>
 #include <ga/GAEvalData.h>
-#include <ga/std_stream.h>
 
 class GAGeneticAlgorithm;
 class GAGenome;
@@ -227,12 +229,12 @@ public:
     virtual void copy(const GAGenome &);
 
 #ifdef GALIB_USE_STREAMS
-    virtual int read(STD_ISTREAM &)
+    virtual int read(std::istream &)
     {
         GAErr(GA_LOC, className(), "read", gaErrOpUndef);
         return 0;
     }
-    virtual int write(STD_OSTREAM &) const
+    virtual int write(std::ostream &) const
     {
         GAErr(GA_LOC, className(), "write", gaErrOpUndef);
         return 0;
@@ -390,12 +392,12 @@ protected:
 
 
 #ifdef GALIB_USE_STREAMS
-inline STD_OSTREAM & operator<< (STD_OSTREAM& os, const GAGenome& genome)
+inline std::ostream & operator<< (std::ostream& os, const GAGenome& genome)
 {
     genome.write(os);
     return(os);
 }
-inline STD_ISTREAM & operator>> (STD_ISTREAM & is, GAGenome& genome)
+inline std::istream & operator>> (std::istream & is, GAGenome& genome)
 {
     genome.read(is);
     return(is);

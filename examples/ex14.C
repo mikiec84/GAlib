@@ -12,17 +12,15 @@ containing a list of lists.  This example shows how to derive your own genome
 class and illustrates the use of one of the template genomes (GAListGenome)
 from the GAlib.
 */
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
 #include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define cerr STD_CERR
-#define endl STD_ENDL
-#define istream STD_ISTREAM
-#define ostream STD_OSTREAM
-
+using namespace std;
 
 // Here we specify how big the lists will be and how many lists will be in each
 // composite genome.  These are the default values - you can change them from

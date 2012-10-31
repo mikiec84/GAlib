@@ -1,6 +1,7 @@
 /** 
   @file GAList.h
   @brief  This defines the template-ized list objects.
+
   @author Matthew Wall  
   @date 25-Feb-1995
 

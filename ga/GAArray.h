@@ -1,6 +1,8 @@
-/** @file GAArray.h
+/** 
+    @file GAArray.h
     @brief defines the array base class. 
-    @author Matthew Wall  
+    
+	@author Matthew Wall  
 	@date 22-Apr-1995
 	
   Copyright 1995 Massachusetts Institute of Technology.

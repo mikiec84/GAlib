@@ -1,6 +1,7 @@
 /** 
   @file GASelector.h
   @brief pick genomes from a population.
+
   @author Matthew Wall 
   @date 10-Aug-1994
 

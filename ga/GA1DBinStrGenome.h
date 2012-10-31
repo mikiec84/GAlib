@@ -10,6 +10,7 @@
   This header defines the interface for the 1D binary string genome, including
 crossover objects and all the default and built-in operators.
 */
+
 #ifndef _ga_binstr1_h_
 #define _ga_binstr1_h_
 
@@ -90,8 +91,8 @@ public:
     virtual void copy(const GAGenome&);
 
 #ifdef GALIB_USE_STREAMS
-    virtual int read(STD_ISTREAM & is);
-    virtual int write(STD_OSTREAM & os) const;
+    virtual int read(std::istream & is);
+    virtual int write(std::ostream & os) const;
 #endif
 
     virtual int equal(const GAGenome & c) const;

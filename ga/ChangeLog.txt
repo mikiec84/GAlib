@@ -1,3 +1,8 @@
+2012-10-31 Yan Ren <pemryan@gmail,com>
+    * remove std_stream.h
+	* use <iostream> <fstream>
+    * use of <iostream.h> and <fstream.h> is no longer supported.
+
 2012-10-30 Yan Ren <pemryan@gmail.com>
     * replaced GAID's classID/className implementation with RTTI.
 

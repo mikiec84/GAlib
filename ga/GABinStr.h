@@ -1,6 +1,6 @@
 /** 
   @file GABinStr.h
-  @brief  This header defines the interface for the binary string.
+  @brief This header defines the interface for the binary string.
 
   @author Matthew Wall  
   @date 30-Jun-1995

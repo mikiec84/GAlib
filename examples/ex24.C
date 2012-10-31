@@ -17,12 +17,11 @@ example).
 
 #include <stdio.h>
 #include <math.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define endl STD_ENDL
-#define ofstream STD_OFSTREAM
+using namespace std;
 
 #define INSTANTIATE_REAL_GENOME
 #include <ga/GARealGenome.h>
@@ -236,7 +235,7 @@ main(int argc, char** argv)
 /// dump the final population to file
 
     cout << "printing population to file 'population.dat'..." << endl;
-    outfile.open("population.dat", (STD_IOS_OUT | STD_IOS_TRUNC));
+    outfile.open("population.dat", (std::ios::out | std::ios::trunc));
     for(int i = 0; i < ga.population().size(); i++)
     {
         genome = ga.population().individual(i);
@@ -247,7 +246,7 @@ main(int argc, char** argv)
 /// dump the function to file so you can plot the population on it
 
     cout << "printing function to file 'sinusoid.dat'..." << endl;
-    outfile.open("sinusoid.dat", (STD_IOS_OUT | STD_IOS_TRUNC));
+    outfile.open("sinusoid.dat", (std::ios::out | std::ios::trunc));
     for(float x = MIN_VALUE; x <= MAX_VALUE; x += INC)
     {
         outfile << genome.gene(0, x) << "\t" << genome.score() << "\n";

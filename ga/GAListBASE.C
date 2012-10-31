@@ -1,15 +1,16 @@
-/** @file GAListbase.C
+/** 
+  @file GAListbase.C
+  @brief This defines the list objects.
+  
   @author Matthew Wall 10-Dec-94
+  
   Copyright 1995 Massachusetts Institute of Technology
 
- DESCRIPTION:
-  This defines the list objects.
-
- TO DO:
-  Make insert work better with size and depth so not so many recalcs needed.
+ @todo  Make insert work better with size and depth so not so many recalcs needed.
   Implement better memory mangement, faster allocation, referencing.
   Use array representation of nodes so we don't have to do so much recursion.
 */
+
 #include <ga/GAListBASE.h>
 #include <ga/gaerror.h>
 

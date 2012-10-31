@@ -1,5 +1,6 @@
 /** 
   @file ex2.C
+
   @author Matthew Wall
   @date 28-Jul-1994
   
@@ -12,14 +13,16 @@ scaled fitness selection and non-steady-state population generation) and
 binary-to-decimal, 1D genomes.  We also use the userData argument to the
 objective function.
 */
+
 #include <stdio.h>
 #include <math.h>
-
+#include <iostream>
+#include <fstream>
 #include <ga/GASimpleGA.h>
 #include <ga/GABin2DecGenome.h>
 #include <ga/std_stream.h>
 
-#define cout STD_COUT
+using namespace std;
 
 float Objective(GAGenome &);
 

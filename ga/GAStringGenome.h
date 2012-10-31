@@ -1,4 +1,5 @@
-/** @file GAStringGenome.h
+/** 
+    @file GAStringGenome.h
     @brief This header defines the interface for the string genome.
 
     @author Matthew Wall  

@@ -10,14 +10,14 @@
 alleles (-1, 0, 1).  The objective function for this program tries to
 alternate 0 and 1 then put -1 in the corners.
 */
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define endl STD_ENDL
-#define ostream STD_OSTREAM
+using namespace std;
 
 float objective(GAGenome &);
 

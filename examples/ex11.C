@@ -9,11 +9,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define ostream STD_OSTREAM
+using namespace std;
 
 // The objective function tells how good a genome is.  The Initializer defines
 // how the lists should be initialized.

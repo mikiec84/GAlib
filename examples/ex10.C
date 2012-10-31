@@ -20,13 +20,11 @@ algorithm, but you'll get bogus results unless you modify the algorithm.
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define cerr STD_CERR
-#define endl STD_ENDL
-#define ofstream STD_OFSTREAM
+using namespace std;
 
 #define USE_RAW_SINE
 
@@ -120,7 +118,7 @@ main(int argc, char **argv)
     genome = ga.statistics().bestIndividual();
     cout << "the ga found an optimum at the point " << genome.phenotype(0) << endl;
 
-    outfile.open(popfilename1, (STD_IOS_OUT | STD_IOS_TRUNC));
+    outfile.open(popfilename1, (std::ios::out | std::ios::trunc));
     if(outfile.fail())
     {
         cerr << "Cannot open " << popfilename1 << " for output.\n";
@@ -146,7 +144,7 @@ main(int argc, char **argv)
     genome = ga.statistics().bestIndividual();
     cout << "the ga found an optimum at the point " << genome.phenotype(0) << endl;
 
-    outfile.open(popfilename2, (STD_IOS_OUT | STD_IOS_TRUNC));
+    outfile.open(popfilename2, (std::ios::out | std::ios::trunc));
     if(outfile.fail())
     {
         cerr << "Cannot open " << popfilename2 << " for output.\n";
@@ -172,7 +170,7 @@ main(int argc, char **argv)
     genome = ga.statistics().bestIndividual();
     cout << "the ga found an optimum at the point " << genome.phenotype(0) << endl;
 
-    outfile.open(popfilename3, (STD_IOS_OUT | STD_IOS_TRUNC));
+    outfile.open(popfilename3, (std::ios::out | std::ios::trunc));
     if(outfile.fail())
     {
         cerr << "Cannot open " << popfilename3 << " for output.\n";
@@ -190,7 +188,7 @@ main(int argc, char **argv)
 // Now dump the function to file for comparisons
 
     cout << "dumping the function to file..." << endl;
-    outfile.open(filename, (STD_IOS_OUT | STD_IOS_TRUNC));
+    outfile.open(filename, (std::ios::out | std::ios::trunc));
     if(outfile.fail())
     {
         cerr << "Cannot open " << filename << " for output.\n";

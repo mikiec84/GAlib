@@ -1,5 +1,6 @@
 /** 
   @file GAMask.h
+
   @author Matthew Wall  
   @date 19-Apr-1995
 

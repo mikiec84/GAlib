@@ -23,12 +23,11 @@ to use the sigma truncation scaling method to handle the mixed scores.
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define ostream STD_OSTREAM
-
+using namespace std;
 
 // Objective function and initializer declarations.
 float objective(GAGenome &);

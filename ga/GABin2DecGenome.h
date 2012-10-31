@@ -1,6 +1,7 @@
 /** 
   @file GABin2DecGenome.h
   @brief defines the interface for the binary-to-decimal genome.
+
   @author Matthew Wall  
   @date 19-Apr-1995
 
@@ -176,8 +177,8 @@ public:
     virtual void copy(const GAGenome &);
 
 #ifdef GALIB_USE_STREAMS
-    virtual int read(STD_ISTREAM &);
-    virtual int write(STD_OSTREAM &) const;
+    virtual int read(std::istream &);
+    virtual int write(std::ostream &) const;
 #endif
 
     virtual int equal(const GAGenome &) const;

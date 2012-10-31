@@ -1,4 +1,5 @@
-/** @file gatypes.h
+/** 
+    @file gatypes.h
   
 	@author Matthew Wall  
 	@date 29-Apr-1995

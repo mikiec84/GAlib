@@ -1,12 +1,12 @@
-/** @file GARealGenome.C
+/** 
+  @file GARealGenome.C
+  @brief Source file for the real number specialization of the array genome.
   @author Matthew Wall 
-  @date 11-nov-95
-  Copyright (c) 1995-1996 Massachusetts Institute of Technology
-                          all rights reserved
-
- DESCRIPTION:
-   Source file for the real number specialization of the array genome.
+  @date 11-Nov-1995
+  
+  Copyright (c) 1995-1996 Massachusetts Institute of Technology, all rights reserved   
 */
+
 #include <ga/GARealGenome.h>
 
 
@@ -151,7 +151,7 @@ GA1DArrayAlleleGenome<float>::~GA1DArrayAlleleGenome()
 #ifdef GALIB_USE_STREAMS
 /// The read specialization takes in each number and stuffs it into the array.
 template <> int
-GA1DArrayAlleleGenome<float>::read(STD_ISTREAM & is)
+GA1DArrayAlleleGenome<float>::read(std::istream & is)
 {
     unsigned int i = 0;
     float val;
@@ -168,7 +168,7 @@ GA1DArrayAlleleGenome<float>::read(STD_ISTREAM & is)
     if(is.eof() && i < nx)
     {
         GAErr(GA_LOC, className(), "read", gaErrUnexpectedEOF);
-        is.clear(STD_IOS_BADBIT | is.rdstate());
+        is.clear(std::ios::badbit | is.rdstate());
         return 1;
     }
     return 0;

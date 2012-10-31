@@ -1,10 +1,13 @@
-/** @file GASStateGA.C
-  @author Matthew Wall  28-jul-94
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
-   Souce file for the steady-state genetic algorithm object.
+/** 
+  @file GASStateGA.C
+  @brief Souce file for the steady-state genetic algorithm object.
+  
+  @author Matthew Wall  
+  
+  @date 28-Jul-1994
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 */
+
 #include <ga/GASStateGA.h>
 #include <ga/garandom.h>
 

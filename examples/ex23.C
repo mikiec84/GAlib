@@ -11,12 +11,11 @@ minimize your objective functions.
 
 #include <stdio.h>
 #include <math.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define endl STD_ENDL
-#define ofstream STD_OFSTREAM
+using namespace std;
 
 #define INSTANTIATE_REAL_GENOME
 #include <ga/GARealGenome.h>
@@ -79,7 +78,7 @@ main(int argc, char** argv)
 // dump the initial population to file
 
     cout << "printing initial population to file..." << endl;
-    outfile.open("popi.dat", (STD_IOS_OUT | STD_IOS_TRUNC));
+    outfile.open("popi.dat", (std::ios::out | std::ios::trunc));
     for(int ii = 0; ii < ga.population().size(); ii++)
     {
         genome = ga.population().individual(ii);
@@ -95,7 +94,7 @@ main(int argc, char** argv)
 // dump the final population to file
 
     cout << "printing final population to file..." << endl;
-    outfile.open("popf.dat", (STD_IOS_OUT | STD_IOS_TRUNC));
+    outfile.open("popf.dat", (std::ios::out | std::ios::trunc));
     for(int i = 0; i < ga.population().size(); i++)
     {
         genome = ga.population().individual(i);
@@ -106,7 +105,7 @@ main(int argc, char** argv)
 // dump the function to file so you can plot the population on it
 
     cout << "printing function to file..." << endl;
-    outfile.open("sinusoid.dat", (STD_IOS_OUT | STD_IOS_TRUNC));
+    outfile.open("sinusoid.dat", (std::ios::out | std::ios::trunc));
     for(float x = MIN_VALUE; x <= MAX_VALUE; x += INC)
     {
         outfile << genome.gene(0, x) << "\t" << genome.score() << "\n";

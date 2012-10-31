@@ -16,10 +16,12 @@ example - not good programming style, but it gets the job done.
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
 #include <ga/std_stream.h>
 
-#define cout STD_COUT
+using std::cout;
 
 // This is the objective function for computing Holland's 1993 ICGA version
 // of the Royal Road problem.  It has been corrected per GAList volume 7

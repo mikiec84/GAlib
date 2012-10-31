@@ -1,6 +1,7 @@
 /** 
   @file   ex1.C
   @brief  Example program for the SimpleGA class and 2DBinaryStringGenome class.
+
   @author Matthew Wall
   @date 28-jul-1994
   
@@ -16,11 +17,14 @@ This program tries to fill the 2Dgenome with alternating 1s and 0s.
 to use if you want to generate a 'good' genome with this kind of objective
 function.  But it does work.
 */
+
+#include <iostream>
+#include <fstream>
 #include <ga/GASimpleGA.h>	// we're going to use the simple GA
 #include <ga/GA2DBinStrGenome.h> // and the 2D binary string genome
 #include <ga/std_stream.h>
 
-#define cout STD_COUT
+using namespace std;
 
 float Objective(GAGenome &);	// This is the declaration of our obj function.
 // The definition comes later in the file.

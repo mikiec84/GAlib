@@ -1,5 +1,6 @@
 /** 
   @file ex7.C
+  
   @author Matthew Wall
   @date 19-Jan-1995
   
@@ -12,12 +13,11 @@ a few more fancy things with the genome (ie use the read/write methods).
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define cerr STD_CERR
-#define ifstream STD_IFSTREAM
+using namespace std;
 
 float objective(GAGenome &);
 

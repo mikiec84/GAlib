@@ -1,6 +1,7 @@
 /** 
   @file  ex5.C
   @brief a composite genome derived from the GAGenome and containing a 2DBinStr genome and a Bin2Dec genome.
+
   @author Matthew Wall
   @date 10-dec-1994
   
@@ -20,17 +21,14 @@ override-able on any instance of the new genome.
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <iostream>
+#include <fstream>
 #include <ga/GABin2DecGenome.h>
 #include <ga/GA2DBinStrGenome.h>
 #include <ga/GASStateGA.h>
 #include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define cerr STD_CERR
-#define istream STD_ISTREAM
-#define ostream STD_OSTREAM
-#define ifstream STD_IFSTREAM
-
+using namespace std;
 
 // This is the class definition for the new genome.  The default operators are
 // defined as static member functions.  They can be overridden if necessary by

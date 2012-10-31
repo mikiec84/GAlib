@@ -1,4 +1,5 @@
-/** @file GARealGenome.h
+/** 
+    @file GARealGenome.h
 	@brief defines the specialization of the array genome for real number.
 
 	@author Matthew Wall 

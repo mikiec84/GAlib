@@ -1,17 +1,20 @@
-/** @file GAScaling.C
-  @author Matthew Wall  10-aug-94
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
+/** 
+  @file GAScaling.C
+  @brief Class definitions for the scaling objects.
+  
+  @author Matthew Wall  
+  @date 10-Aug-1994
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 
- DESCRIPTION:
-  Class definitions for the scaling objects.  These objects translate (scale)
+  These objects translate (scale)
 the raw objective scores of a population into 'fitness' scores that are used to
 determine which genomes are fit for mating/selection.
   In all of these routines we do a check to be sure that we have enough space
 to do our evaluations.  We don't need to do this so long as the population
-objects that call us do the test themselves.  I'll leave the redundancy for
-now.
+objects that call us do the test themselves.  I'll leave the redundancy for now.
 */
+
 #include <math.h>
 #include <ga/gaerror.h>
 #include <ga/GAScaling.h>

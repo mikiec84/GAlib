@@ -1,10 +1,13 @@
-/** @file GABaseGA.C
-  @author Matthew Wall  28-jul-94
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
-  Source file for the base genetic algorithm object.
+/** 
+  @file GABaseGA.C
+  @brief Source file for the base genetic algorithm object.
+  
+  @author Matthew Wall  
+  @date 28-Jul-1994
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 */
+
 #include <stdio.h>
 #include <string.h>
 #include <ga/GABaseGA.h>
@@ -368,7 +371,7 @@ GAGeneticAlgorithm::parameters(const char* filename, GABoolean flag)
 }
 
 const GAParameterList&
-GAGeneticAlgorithm::parameters(STD_ISTREAM& is, GABoolean flag)
+GAGeneticAlgorithm::parameters(std::istream& is, GABoolean flag)
 {
     params.read(is, flag);
     for(int i = 0; i < params.size(); i++)

@@ -1,8 +1,9 @@
-/** @file GANode.h
+/** 
+    @file GANode.h
 	@brief This defines the node objects.
 	
 	@author Matthew Wall  
-	@date 25-nov-94
+	@date 25-Nov-1994
   
 Copyright 1995 Massachusetts Institute of Technology.
 */
@@ -10,8 +11,8 @@ Copyright 1995 Massachusetts Institute of Technology.
 #ifndef _ga_node_h_
 #define _ga_node_h_
 
+#include <iostream>
 #include <ga/gaconfig.h>
-#include <ga/std_stream.h>
 
 /** @brief basic node object.
 
@@ -41,7 +42,7 @@ struct GANodeBASE
 
 
 #ifdef GALIB_USE_STREAMS
-inline STD_OSTREAM & operator<<(STD_OSTREAM & os, GANodeBASE & arg)
+inline std::ostream & operator<<(std::ostream & os, GANodeBASE & arg)
 {
     os << "  node:   " << &arg << "\n";
     os << "  next:   " << arg.next << "\n";
@@ -98,7 +99,7 @@ struct GANode : public GANodeBASE
 };
 
 #ifdef GALIB_USE_STREAMS
-template <class T> STD_OSTREAM & operator<<(STD_OSTREAM & os, GANode<T> & arg)
+template <class T> std::ostream & operator<<(std::ostream & os, GANode<T> & arg)
 {
     os << "  node:   " << &arg << "\n";
     os << "  next:   " << arg.next << "\n";

@@ -1,6 +1,7 @@
 /**
   @file GADemeGA.h
   @brief Header for the deme (parallel population) genetic algorithm class.
+
   @author Matthew Wall  
   @date Jan-1996
 
@@ -162,12 +163,12 @@ protected:
 };
 
 #ifdef GALIB_USE_STREAMS
-inline STD_OSTREAM & operator<< (STD_OSTREAM & os, GADemeGA & arg)
+inline std::ostream & operator<< (std::ostream & os, GADemeGA & arg)
 {
     arg.write(os);
     return(os);
 }
-inline STD_ISTREAM & operator>> (STD_ISTREAM & is, GADemeGA & arg)
+inline std::istream & operator>> (std::istream & is, GADemeGA & arg)
 {
     arg.read(is);
     return(is);

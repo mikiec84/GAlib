@@ -1,11 +1,13 @@
-/** @file GAAllele.C
-  @author Matthew Wall 21-mar-95
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
- DESCRIPTION:
-   Definition for the allele set class and its core container.
+/** 
+  @file GAAllele.C
+  @brief Definition for the allele set class and its core container.
+  
+  @author Matthew Wall 
+  @date 21-Mar-1995
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved 
 */
+
 #ifndef _ga_allele_C_
 #define _ga_allele_C_
 
@@ -315,13 +317,13 @@ GAAlleleSet<T>::allele(unsigned int i) const
 
 #ifdef GALIB_USE_STREAMS
 template <class T> int
-GAAlleleSet<T>::read(STD_ISTREAM&)
+GAAlleleSet<T>::read(std::istream&)
 {
     GAErr(GA_LOC, "GAAlleleSet", "read", gaErrOpUndef);
     return 1;
 }
 template <class T> int
-GAAlleleSet<T>::write(STD_OSTREAM &) const
+GAAlleleSet<T>::write(std::ostream &) const
 {
     GAErr(GA_LOC, "GAAlleleSet", "write", gaErrOpUndef);
     return 1;
@@ -333,7 +335,7 @@ GAAlleleSet<T>::write(STD_OSTREAM &) const
 /// The default read assumes input in the format that we write out.
 ///   We should do more checks on the values that we read in.
 template <class T> int
-GAAlleleSet<T>::read(STD_ISTREAM& is){
+GAAlleleSet<T>::read(std::istream& is){
   char buf[32];
   int n;
   if(is.fail() || is.eof()) return 1;
@@ -385,7 +387,7 @@ GAAlleleSet<T>::read(STD_ISTREAM& is){
     if(is.fail() || is.eof()) return 1;
   }
   else {
-    is.clear(STD_IOS_BADBIT | is.rdstate());
+    is.clear(std::ios::badbit | is.rdstate());
     GAErr(GA_LOC, "GAAlleleSet", "read",
 	  "unrecognized allele set type.",
 	  "Expected ENUMERATED, BOUNDED, or DISCRETIZED");
@@ -397,7 +399,7 @@ GAAlleleSet<T>::read(STD_ISTREAM& is){
 /// The default write method prints out the type of the allele set followed by
 /// the contents.  We use a single space as our separator.
 template <class T> int
-GAAlleleSet<T>::write(STD_OSTREAM & os) const {
+GAAlleleSet<T>::write(std::ostream & os) const {
   switch(core->type){
   case GAAllele::ENUMERATED:
     os << "ENUMERATED ";

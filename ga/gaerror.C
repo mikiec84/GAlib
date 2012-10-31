@@ -1,11 +1,13 @@
-/** @file gaerror.C
-  @author Matthew Wall  28-jul-94
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
- DESCRIPTION:
-  This file contains all of the error messages for the library.
+/** 
+  @file gaerror.C
+  @brief This file contains all of the error messages for the library.
+  
+  @author Matthew Wall  
+  @date 28-Jul-1994
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 */
+
 #include <string.h>
 #include <ga/gaerror.h>
 #include <stdio.h>
@@ -16,7 +18,7 @@ char _gaerrbuf2[120];
 
 
 #ifdef GALIB_USE_STREAMS
-static STD_OSTREAM *__gaErrStream = & STD_CERR;
+static std::ostream *__gaErrStream = & std::cerr;
 #endif
 static GABoolean __gaErrFlag = gaTrue;
 static char *__gaErrStr[] =
@@ -176,7 +178,7 @@ GAReportErrors(GABoolean flag)
 
 #ifdef GALIB_USE_STREAMS
 void
-GASetErrorStream(STD_OSTREAM & s)
+GASetErrorStream(std::ostream & s)
 {
     __gaErrStream = &s;
 }

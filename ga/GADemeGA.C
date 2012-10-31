@@ -1,10 +1,13 @@
-/** @file GADemeGA.C
-  @author Matthew Wall  28-jul-94
-  Copyright (c) 1995-1996 Massachusetts Institute of Technology
-                          all rights reserved
-
-   Souce file for the deme-based genetic algorithm object.
+/** 
+  @file GADemeGA.C
+  @brief Souce file for the deme-based genetic algorithm object.
+  
+  @author Matthew Wall  
+  @date 28-Jul-1994
+  
+  Copyright (c) 1995-1996 Massachusetts Institute of Technology, all rights reserved
 */
+
 #include <ga/garandom.h>
 #include <ga/GADemeGA.h>
 

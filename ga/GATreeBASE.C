@@ -1,16 +1,17 @@
-/** @file GATreeBase.C
+/** 
+  @file GATreeBase.C
+  @brief This defines the tree objects.
+  
   @author Matthew Wall  25-nov-94
+  
   Copyright 1995 Massachusetts Institute of Technology
 
- DESCRIPTION:
-  This defines the tree objects.
-
- TO DO:
-  Make insert work better with size and depth so not so many recalcs needed.
+  @todo Make insert work better with size and depth so not so many recalcs needed.
   Implement better memory mangement, faster allocation, referencing.
   Use array representation of nodes so we don't have to do so much recursion.
   Figure better way to do traversals so that we speed up the swaps.
 */
+
 #include <ga/GATreeBASE.h>
 #include <ga/gaerror.h>
 

@@ -1,6 +1,8 @@
-/** @file GA2DBinStrGenome.h
+/** 
+    @file GA2DBinStrGenome.h
     @brief defines the interface for the 2D binary string genome.
-    @author Matthew Wall  
+    
+	@author Matthew Wall  
     @date 19-Apr-1995
 	
   Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved.
@@ -68,8 +70,8 @@ public:
     virtual void copy(const GAGenome & chrom);
 
 #ifdef GALIB_USE_STREAMS
-    virtual int read(STD_ISTREAM &);
-    virtual int write(STD_OSTREAM &) const;
+    virtual int read(std::istream &);
+    virtual int write(std::ostream &) const;
 #endif
 
     virtual int equal(const GAGenome & c) const;

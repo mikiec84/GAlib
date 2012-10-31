@@ -11,12 +11,11 @@ genome.  This example uses points in the nodes.
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define ostream STD_OSTREAM
-
+using namespace std;
 
 // This is the object that we're going to put in the nodes.  Each point has
 // three coordinates: x,y,z.

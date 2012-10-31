@@ -1,7 +1,12 @@
-/** @file GADCrowdingGA.C
-  @author Matthew Wall 29-mar-99
+/** 
+  @file GADCrowdingGA.C
+  
+  @author Matthew Wall 
+  @date 29-Mar-1999
+  
   Copyright (c) 1999 Matthew Wall  , all rights reserved
 */
+
 #include "GADCrowdingGA.h"
 #include "GAList.h"
 #include "garandom.h"

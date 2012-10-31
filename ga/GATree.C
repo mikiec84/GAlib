@@ -1,18 +1,19 @@
-/** @file GATree.C
+/** 
+    @file GATree.C
 	@brief defines the templatized tree objects.
-    @author Matthew Wall  
+    
+	@author Matthew Wall  
 	@date 25-Feb-1995
 
 Copyright 1995 Massachusetts Institute of Technology
 
-  This file defines the templatized tree objects.
 
- @todo
-  Make insert work better with size and depth so not so many recalcs needed.
+ @todo  Make insert work better with size and depth so not so many recalcs needed.
   Implement better memory mangement, faster allocation, referencing.
   Use array representation of nodes so we don't have to do so much recursion.
   Figure better way to do traversals so that we speed up the swaps.
 */
+
 #ifndef _ga_treetmpl_C_
 #define _ga_treetmpl_C_
 

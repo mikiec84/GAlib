@@ -1,4 +1,5 @@
-/** @file GASStateGA.h
+/** 
+    @file GASStateGA.h
     @brief Header file for the steady-state genetic algorithm class.
 
 	@author Matthew Wall  
@@ -94,12 +95,12 @@ protected:
 
 
 #ifdef GALIB_USE_STREAMS
-inline STD_OSTREAM & operator<< (STD_OSTREAM & os, GASteadyStateGA & arg)
+inline std::ostream & operator<< (std::ostream & os, GASteadyStateGA & arg)
 {
     arg.write(os);
     return(os);
 }
-inline STD_ISTREAM & operator>> (STD_ISTREAM & is, GASteadyStateGA & arg)
+inline std::istream & operator>> (std::istream & is, GASteadyStateGA & arg)
 {
     arg.read(is);
     return(is);

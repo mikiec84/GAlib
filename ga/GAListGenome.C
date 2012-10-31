@@ -1,11 +1,13 @@
-/** @file GAListGenome.C
-  @author Matthew Wall  25-feb-95
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
- DESCRIPTION:
-  Source file for the list genome.
+/** 
+  @file GAListGenome.C
+  @brief Source file for the list genome.
+  
+  @author Matthew Wall  
+  @date 25-Feb-1995
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 */
+
 #ifndef _ga_list_C_
 #define _ga_list_C_
 
@@ -82,7 +84,7 @@ GAListGenome<T>::copy(const GAGenome & orig)
 /// the stream.  We don't try to write the contents of the nodes - we simply
 /// write a . for each node in the list.
 template <class T> int
-GAListGenome<T>::write(STD_OSTREAM & os) const
+GAListGenome<T>::write(std::ostream & os) const
 {
     os << "node       next       prev       contents\n";
     if(!this->hd)

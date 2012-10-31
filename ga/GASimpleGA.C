@@ -1,10 +1,13 @@
-/** @file GASimpleGA.C
-  @author Matthew Wall  28-jul-94
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
-  Source file for the simple genetic algorithm object.
+/** 
+  @file GASimpleGA.C
+  @brief Source file for the simple genetic algorithm object.
+  
+  @author Matthew Wall  
+  @date 28-Jul-1994
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 */
+
 #include <ga/GASimpleGA.h>
 #include <ga/garandom.h>
 

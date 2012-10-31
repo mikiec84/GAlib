@@ -1,5 +1,6 @@
 /** 
   @file  ex21.C
+
   @author Matthew Wall
   @date 1-Jan-1996
   
@@ -13,12 +14,14 @@ use the enumerated and bounded types of allele sets.
 allele set for each element in the array.  The constructor that you use to
 create the array determines which behaviour you'll get.
 */
+
 #include <stdio.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
 #include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define endl STD_ENDL
+using namespace std;
 
 #define INSTANTIATE_REAL_GENOME
 #include <ga/GARealGenome.h>

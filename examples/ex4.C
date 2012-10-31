@@ -1,5 +1,6 @@
 /** 
   @file ex4.C
+
   @author Matthew Wall
   @date 28-Jul-1994
   
@@ -20,12 +21,13 @@ algorithm object.
 */
 
 #include <stdio.h>
-
+#include <iostream>
+#include <fstream>
 #include <ga/GASStateGA.h>	// include the steady-state GA header
 #include <ga/GA3DBinStrGenome.h> // and the header for the genome we'll use
 #include <ga/std_stream.h>
 
-#define cout STD_COUT
+using namespace std;
 
 float objective(GAGenome &);
 

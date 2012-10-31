@@ -1,10 +1,13 @@
-/** @file GAIncGA.C
-  @author Matthew Wall  28-jul-94
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
-  Source file for the incremental genetic algorithm object.
+/** 
+  @file GAIncGA.C
+  @brief Source file for the incremental genetic algorithm object.
+  
+  @author Matthew Wall  
+  @date 28-Jul-1994
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 */
+
 #include <ga/GAIncGA.h>
 #include <ga/garandom.h>
 

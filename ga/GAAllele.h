@@ -1,6 +1,8 @@
-/** @file GAAllele.h
+/** 
+    @file GAAllele.h
 	@brief define a class of alleles.
-    @author Matthew Wall  
+    
+	@author Matthew Wall  
 	@date 21-Mar-1995
 	
   Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved.
@@ -10,12 +12,12 @@ and an allele set is a list of possible values (I use 'set' because it doesn't
 imply the specific implementation of the container class).
  */
 
- #ifndef _ga_allele_h_
+#ifndef _ga_allele_h_
 #define _ga_allele_h_
 
+#include <iostream>
 #include <ga/gaconfig.h>
 #include <ga/garandom.h>
-#include <ga/std_stream.h>
 
 /** Allele genome type enum.*/
 class GAAllele
@@ -197,8 +199,8 @@ public:
     }
 
 #ifdef GALIB_USE_STREAMS
-    int read(STD_ISTREAM &);
-    int write(STD_OSTREAM & os) const;
+    int read(std::istream &);
+    int write(std::ostream & os) const;
 #endif
 
 #if defined(THINK_C)
@@ -257,14 +259,14 @@ protected:
 
 
 #ifdef GALIB_USE_STREAMS
-template <class T> STD_OSTREAM &
-operator<< (STD_OSTREAM & os, const GAAlleleSet<T> & arg)
+template <class T> std::ostream &
+operator<< (std::ostream & os, const GAAlleleSet<T> & arg)
 {
     arg.write(os);
     return os;
 }
-template <class T> STD_ISTREAM &
-operator>> (STD_ISTREAM & is, GAAlleleSet<T> & arg)
+template <class T> std::istream &
+operator>> (std::istream & is, GAAlleleSet<T> & arg)
 {
     arg.read(is);
     return is;

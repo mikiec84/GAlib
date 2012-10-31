@@ -1,6 +1,7 @@
 /** 
   @file GAScaling.h
   @brief This is the GAScaling class.  It is used to do scaling on a population.
+
   @author Matthew Wall  
   @date 10-Aug-1994
 

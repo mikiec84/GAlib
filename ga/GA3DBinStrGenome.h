@@ -1,11 +1,13 @@
-/** @file GA3DBinStrGenome.h
-  @author Matthew Wall  19-apr-95
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
+/** 
+  @file GA3DBinStrGenome.h
+  @brief This header defines the interface for the 3D binary string genome. 
 
- DESCRIPTION:
-  This header defines the interface for the 3D binary string genome.
- */
+  @author Matthew Wall  
+  @date 19-Apr-1995
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved.
+*/
+ 
 #ifndef _ga_binstr3_h_
 #define _ga_binstr3_h_
 
@@ -67,8 +69,8 @@ public:
     virtual void copy(const GAGenome & chrom);
 
 #ifdef GALIB_USE_STREAMS
-    virtual int read(STD_ISTREAM &);
-    virtual int write(STD_OSTREAM &) const;
+    virtual int read(std::istream &);
+    virtual int write(std::ostream &) const;
 #endif
 
     virtual int equal(const GAGenome & c) const;

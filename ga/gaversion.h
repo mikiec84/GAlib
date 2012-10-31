@@ -1,4 +1,5 @@
-/** @file gaversion.h
+/** 
+    @file gaversion.h
 	@brief keep track of the versions and revisions of the GA library.
     
 	@author Matthew Wall 

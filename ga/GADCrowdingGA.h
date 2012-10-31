@@ -1,6 +1,7 @@
 /** 
   @file GADCrowdingGA.h
   @brief   Header file for the steady-state genetic algorithm class.
+
   @author Matthew Wall  
   @date 29-Mar-1999
 

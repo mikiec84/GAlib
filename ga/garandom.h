@@ -1,4 +1,5 @@
-/** @file garandom.h
+/** 
+    @file garandom.h
 	@brief Initialize the random function by using the current time as the seed.
   
 	@author Matthew Wall  

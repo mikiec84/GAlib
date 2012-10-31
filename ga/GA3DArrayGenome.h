@@ -1,6 +1,8 @@
-/** @file GA3DArrayGenome.h
+/** 
+    @file GA3DArrayGenome.h
     @brief This header defines the interface for the 3D array genome. 
-    @author Matthew Wall  
+    
+	@author Matthew Wall  
     @date 25-Feb-1995
   
   Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved.
@@ -59,8 +61,8 @@ public:
     virtual void copy(const GAGenome & chrom);
 
 #ifdef GALIB_USE_STREAMS
-    virtual int read(STD_ISTREAM &);
-    virtual int write(STD_OSTREAM &) const;
+    virtual int read(std::istream &);
+    virtual int write(std::ostream &) const;
 #endif
 
     virtual int equal(const GAGenome & c) const;
@@ -178,8 +180,8 @@ public:
     virtual void copy(const GAGenome &);
 
 #ifdef GALIB_USE_STREAMS
-    virtual int read(STD_ISTREAM & is);
-    virtual int write(STD_OSTREAM & os) const;
+    virtual int read(std::istream & is);
+    virtual int write(std::ostream & os) const;
 #endif
 
     virtual int equal(const GAGenome & c) const ;

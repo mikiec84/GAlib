@@ -1,13 +1,17 @@
-/** @file GAGenome.C
-  @author Matthew Wall  19-apr-95
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
+/** 
+  @file GAGenome.C
+  @brief Definitions for genome base class.  
+  
+  @author Matthew Wall  
+  @date 19-Apr-1995
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 
- DESCRIPTION:
-  Definitions for genome base class.  See the header file for complete
+  See the header file for complete
 documentation for deriving new classes.  Comments here are implementation-
 specific details about base class member functions.
 */
+
 #include <ga/GAGenome.h>
 
 ///   These are the default genome operators.

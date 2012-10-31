@@ -1,5 +1,6 @@
 /** 
   @file ex26.C
+
   @author Matthew Wall
   @date 24-Mar-1996
   
@@ -23,16 +24,13 @@ it does get the job done.
 */
 
 #include <math.h>
+#include <iostream>
+#include <fstream>
 #include <ga/GASStateGA.h>
 #include <ga/GAListGenome.h>
 #include <ga/garandom.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define cerr STD_CERR
-#define endl STD_ENDL
-#define ostream STD_OSTREAM
-#define ifstream STD_IFSTREAM
+using namespace std;
 
 // Set this up for your favorite TSP.  The sample one is a contrived problem
 // with the towns laid out in a grid (so it is easy to figure out what the

@@ -1,6 +1,7 @@
 /** 
   @file gaerror.h
   @brief This defines the error routines for handling errors.
+
   @author Matthew Wall  
   @date 7-May-1995
 
@@ -10,9 +11,10 @@
 #ifndef _ga_error_h_
 #define _ga_error_h_
 
+#include <iostream>
+#include <fstream>
 #include <ga/gatypes.h>
 #include <ga/gaconfig.h>
-#include <ga/std_stream.h>
 
 /// This object is for telling us where in the source code an error occurs.
 class GASourceLocator
@@ -119,7 +121,7 @@ void GAReportErrors(GABoolean flag);
 /// Provide a mechanism for redirecting the error messages.
 
 #ifdef GALIB_USE_STREAMS
-void GASetErrorStream(STD_OSTREAM &);
+void GASetErrorStream(std::ostream &);
 #else
 inline void GASetErrorStream() {} /// dummy function
 #endif

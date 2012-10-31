@@ -1,6 +1,8 @@
-/** @file GAEvalData.h
+/** 
+    @file GAEvalData.h
 	@brief the object that contains evaluation data.
-    @author Matthew Wall  
+    
+	@author Matthew Wall  
 	@date 3-Dec-1995
 	
   Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved.

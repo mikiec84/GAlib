@@ -1,11 +1,13 @@
-/** @file garandom.C
-  @author Matthew Wall 5-Sep-95
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
+/** 
+  @file garandom.C
+  @brief Random number stuff for use in GAlib.
+  
+  @author Matthew Wall 
+  @date 5-Sep-1995
 
- DESCRIPTION:
-  Random number stuff for use in GAlib.
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved.
 */
+
 #include <ga/garandom.h>
 #include <time.h>
 #include <math.h>

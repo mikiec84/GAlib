@@ -1,10 +1,11 @@
 /** @file GA1DArrayGenome.C
-    @author Matthew Wall  25-feb-95
-    Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
-
     @brief Source file for the 1D array genome.
-    DESCRIPTION:
+	
+    @author Matthew Wall  25-Feb-1995
+    
+	Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 */
+
 #ifndef _ga_array1_C_
 #define _ga_array1_C_
 
@@ -156,7 +157,7 @@ int GA1DArrayGenome<T>::resize(int len)
 #ifdef GALIB_USE_STREAMS
 /// We don't define this one apriori.  Do it in a specialization.
 template <class T> 
-int GA1DArrayGenome<T>::read(STD_ISTREAM &)
+int GA1DArrayGenome<T>::read(std::istream &)
 {
     GAErr(GA_LOC, className(), "read", gaErrOpUndef);
     return 1;
@@ -166,7 +167,7 @@ int GA1DArrayGenome<T>::read(STD_ISTREAM &)
 /// When we write the data to a stream we do it with spaces between elements.
 /// Also, there is no newline at the end of the stream of digits.
 template <class T> 
-int GA1DArrayGenome<T>::write(STD_OSTREAM & os) const
+int GA1DArrayGenome<T>::write(std::ostream & os) const
 {
     for(unsigned int i = 0; i < nx; i++)
     {
@@ -343,13 +344,13 @@ GA1DArrayAlleleGenome<T>::resize(int len)
 /// Define these so they can easily be specialized as needed.
 #ifdef GALIB_USE_STREAMS
 template <class T> int
-GA1DArrayAlleleGenome<T>::read(STD_ISTREAM& is)
+GA1DArrayAlleleGenome<T>::read(std::istream& is)
 {
     return GA1DArrayGenome<T>::read(is);
 }
 
 template <class T> int
-GA1DArrayAlleleGenome<T>::write(STD_OSTREAM& os) const
+GA1DArrayAlleleGenome<T>::write(std::ostream& os) const
 {
     return GA1DArrayGenome<T>::write(os);
 }

@@ -1,11 +1,15 @@
-/** @file GA3DBinStrGenome.C
-  @author Matthew Wall  19-apr-95
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
+/** 
+  @file GA3DBinStrGenome.C
+  @brief Source file for the 3D binary string genome.
+  
+  @author Matthew Wall  
+  @date 19-Apr-1995
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 
- DESCRIPTION:
-  Source file for the 3D binary string genome.  See the 1D genome for comments.
+  See the 1D genome for comments.
 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -279,7 +283,7 @@ GA3DBinaryStringGenome::resize(int w, int h, int d)
 
 #ifdef GALIB_USE_STREAMS
 int
-GA3DBinaryStringGenome::read(STD_ISTREAM & is)
+GA3DBinaryStringGenome::read(std::istream & is)
 {
     static char c;
     unsigned int i = 0, j = 0, k = 0;
@@ -310,7 +314,7 @@ GA3DBinaryStringGenome::read(STD_ISTREAM & is)
              (i < nx && i != 0))) 	/// didn't get some lines
     {
         GAErr(GA_LOC, className(), "read", gaErrUnexpectedEOF);
-        is.clear(STD_IOS_BADBIT | is.rdstate());
+        is.clear(std::ios::badbit | is.rdstate());
         return 1;
     }
 
@@ -321,7 +325,7 @@ GA3DBinaryStringGenome::read(STD_ISTREAM & is)
 /// Dump the bits to the stream with a newline at the end of each row and
 /// another at the end of each layer.  No newline at the end of the block.
 int
-GA3DBinaryStringGenome::write(STD_OSTREAM & os) const
+GA3DBinaryStringGenome::write(std::ostream & os) const
 {
     for(unsigned int k = 0; k < nz; k++)
     {

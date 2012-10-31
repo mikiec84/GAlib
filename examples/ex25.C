@@ -7,12 +7,13 @@
   Copyright (c) 1995-1996  Massachusetts Institute of Technology
 */
 #include <stdio.h>
+#include <iostream>
+#include <fstream>
 #include <ga/GA1DBinStrGenome.h>
 #include <ga/GADemeGA.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define endl STD_ENDL
+
+using namespace std;
 
 float Objective(GAGenome &);
 

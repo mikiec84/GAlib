@@ -1,6 +1,7 @@
 /** 
-  @file gabincvt.h
+  @file GABinCvt.h
   @brief  Header for the binary to decimal conversion routines.
+
   @author Matthew Wall  
   @date 29-Jun-1995
 

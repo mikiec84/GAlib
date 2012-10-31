@@ -1,5 +1,6 @@
 /** 
   @file ex6.C
+
   @author Matthew Wall
   @date 14-Jan-1995
   
@@ -18,11 +19,11 @@ inlined).
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define ostream STD_OSTREAM
+using namespace std;
 
 
 // The objective function is declared here and defined below.

@@ -1,4 +1,5 @@
-/** @file GAParameter.h
+/** 
+    @file GAParameter.h
     @brief Header for the parameters object used by the GA objects.
   
     @author Matthew Wall  
@@ -10,9 +11,10 @@ Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved.
 #ifndef _ga_parameters_h_
 #define _ga_parameters_h_
 
+#include <iostream>
+#include <fstream>
 #include <ga/gaconfig.h>
 #include <ga/gatypes.h>
-#include <ga/std_stream.h>
 
 
 /** @brief class for naming the parameters.
@@ -144,9 +146,9 @@ public:
 
 #ifdef GALIB_USE_STREAMS
     int write(const char* filename) const;
-    int write(STD_OSTREAM & os) const;
+    int write(std::ostream & os) const;
     int read(const char* filename, GABoolean flag = gaTrue);
-    int read(STD_ISTREAM & is, GABoolean flag = gaTrue);
+    int read(std::istream & is, GABoolean flag = gaTrue);
 #endif
 
 protected:
@@ -157,12 +159,12 @@ protected:
 
 
 #ifdef GALIB_USE_STREAMS
-inline STD_OSTREAM & operator<< (STD_OSTREAM &os, const GAParameterList& plist)
+inline std::ostream & operator<< (std::ostream &os, const GAParameterList& plist)
 {
     plist.write(os);
     return os;
 }
-inline STD_ISTREAM & operator>> (STD_ISTREAM& is, GAParameterList& plist)
+inline std::istream & operator>> (std::istream& is, GAParameterList& plist)
 {
     plist.read(is);
     return is;

@@ -1,11 +1,15 @@
-/** @file GA2DBinStrGenome.C
-  @author Matthew Wall  19-apr-95
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
+/** 
+  @file GA2DBinStrGenome.C
+  @brief Source file for the 2D binary string genome.
+  
+  @author Matthew Wall  
+  @date 19-Apr-1995
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 
- DESCRIPTION:
-  Source file for the 2D binary string genome.  See the 1D genome for comments.
+  See the 1D genome for comments.
 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -191,7 +195,7 @@ GA2DBinaryStringGenome::resize(int w, int h)
 
 #ifdef GALIB_USE_STREAMS
 int
-GA2DBinaryStringGenome::read(STD_ISTREAM & is)
+GA2DBinaryStringGenome::read(std::istream & is)
 {
     static char c;
     unsigned int i = 0, j = 0;
@@ -216,7 +220,7 @@ GA2DBinaryStringGenome::read(STD_ISTREAM & is)
              (i < nx && i != 0)))    /// stopped early on a row
     {
         GAErr(GA_LOC, className(), "read", gaErrUnexpectedEOF);
-        is.clear(STD_IOS_BADBIT | is.rdstate());
+        is.clear(std::ios::badbit | is.rdstate());
         return 1;
     }
 
@@ -227,7 +231,7 @@ GA2DBinaryStringGenome::read(STD_ISTREAM & is)
 /// Dump the digits to the stream with a newline between each row.  No newline
 /// at the end of the whole thing.
 int
-GA2DBinaryStringGenome::write(STD_OSTREAM & os) const
+GA2DBinaryStringGenome::write(std::ostream & os) const
 {
     for(unsigned int j = 0; j < ny; j++)
     {

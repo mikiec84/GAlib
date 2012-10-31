@@ -1,11 +1,13 @@
-/** @file gabincvt.C
-  @author Matthew Wall  29-jun-95
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
- DESCRIPTION:
-  Binary-to-decimal converters.
+/** 
+  @file gabincvt.C
+  @brief Binary-to-decimal converters.
+  
+  @author Matthew Wall  
+  @date 29-Jun-1995
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved 
 */
+
 #include <stdio.h>
 #include <limits.h>
 #include <string.h>

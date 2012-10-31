@@ -1,7 +1,10 @@
-/** @file GAPopulation.C
-  @author Matthew Wall  11-aug-94
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
+/** 
+  @file GAPopulation.C
+  
+  @author Matthew Wall  
+  @date 11-Aug-1994
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 */
 #include <string.h>
 #include <math.h>
@@ -903,7 +906,7 @@ GAPopulation::geneticAlgorithm(GAGeneticAlgorithm& g)
 
 #ifdef GALIB_USE_STREAMS
 void
-GAPopulation::write(STD_OSTREAM & os, SortBasis basis) const
+GAPopulation::write(std::ostream & os, SortBasis basis) const
 {
     for(unsigned int i = 0; i < n; i++)
     {

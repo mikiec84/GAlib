@@ -1,11 +1,13 @@
-/** @file GA3DArrayGenome.C
-  @author Matthew Wall  25-feb-95
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
- DESCRIPTION:
-  Source file for the 3D array genome.
+/** 
+  @file GA3DArrayGenome.C
+  @brief Source file for the 3D array genome.
+  
+  @author Matthew Wall  
+  @date 25-Feb-1995
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved 
 */
+
 #ifndef _ga_array3_C_
 #define _ga_array3_C_
 
@@ -247,7 +249,7 @@ GA3DArrayGenome<T>::resize(int w, int h, int d)
 
 #ifdef GALIB_USE_STREAMS
 template <class T> int
-GA3DArrayGenome<T>::read(STD_ISTREAM &)
+GA3DArrayGenome<T>::read(std::istream &)
 {
     GAErr(GA_LOC, className(), "read", gaErrOpUndef);
     return 1;
@@ -255,7 +257,7 @@ GA3DArrayGenome<T>::read(STD_ISTREAM &)
 
 
 template <class T> int
-GA3DArrayGenome<T>::write(STD_OSTREAM & os) const
+GA3DArrayGenome<T>::write(std::ostream & os) const
 {
     for(unsigned int k = 0; k < nz; k++)
     {
@@ -609,13 +611,13 @@ GA3DArrayAlleleGenome<T>::resize(int w, int h, int d)
 
 #ifdef GALIB_USE_STREAMS
 template <class T> int
-GA3DArrayAlleleGenome<T>::read(STD_ISTREAM& is)
+GA3DArrayAlleleGenome<T>::read(std::istream& is)
 {
     return GA3DArrayGenome<T>::read(is);
 }
 
 template <class T> int
-GA3DArrayAlleleGenome<T>::write(STD_OSTREAM& os) const
+GA3DArrayAlleleGenome<T>::write(std::ostream& os) const
 {
     return GA3DArrayGenome<T>::write(os);
 }

@@ -17,11 +17,11 @@ License).
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define cerr STD_CERR
+using namespace std;
 
 double Gauss(double mean, double variance);
 

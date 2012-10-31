@@ -1,11 +1,13 @@
-/** @file GAStatistics.C
-  @author Matthew Wall  28-jul-94
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
- DESCRIPTION:
-  Definition of the statistics object.
+/** 
+  @file GAStatistics.C
+  @brief Definition of the statistics object.
+  
+  @author Matthew Wall  
+  @date 28-Jul-1994
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 */
+
 #include <string.h>
 #include <ga/gaerror.h>
 #include <ga/GAStatistics.h>
@@ -604,9 +606,9 @@ GAStatistics::writeScores()
         return;
     }
 #ifdef GALIB_USE_STREAMS
-    STD_OFSTREAM outfile(scorefile, ((gen[0] == 0) ?
-                                     (STD_IOS_OUT | STD_IOS_TRUNC) :
-                                     (STD_IOS_OUT | STD_IOS_APP)));
+    std::ofstream outfile(scorefile, ((gen[0] == 0) ?
+                                     (std::ios::out | std::ios::trunc) :
+                                     (std::ios::out | std::ios::app)));
 /// should be done this way, but SGI systems (and others?) don't do it right...
 ///  if(! outfile.is_open()){
     if(outfile.fail())
@@ -624,7 +626,7 @@ GAStatistics::writeScores()
 int
 GAStatistics::write(const char* filename) const
 {
-    STD_OFSTREAM outfile(filename, (STD_IOS_OUT | STD_IOS_TRUNC));
+    std::ofstream outfile(filename, (std::ios::out | std::ios::trunc));
 /// should be done this way, but SGI systems (and others?) don't do it right...
 ///  if(! outfile.is_open()){
     if(outfile.fail())
@@ -638,7 +640,7 @@ GAStatistics::write(const char* filename) const
 }
 
 int
-GAStatistics::write(STD_OSTREAM & os) const
+GAStatistics::write(std::ostream & os) const
 {
     os << curgen << "\t# current generation\n";
     os << convergence() << "\t# current convergence\n";
@@ -680,7 +682,7 @@ GAStatistics::write(STD_OSTREAM & os) const
 int
 GAStatistics::scores(const char* filename, int w)
 {
-    STD_OFSTREAM outfile(filename, (STD_IOS_OUT | STD_IOS_TRUNC));
+    std::ofstream outfile(filename, (std::ios::out | std::ios::trunc));
 /// should be done this way, but SGI systems (and others?) don't do it right...
 ///  if(! outfile.is_open()){
     if(outfile.fail())
@@ -695,7 +697,7 @@ GAStatistics::scores(const char* filename, int w)
 
 
 int
-GAStatistics::scores(STD_OSTREAM & os, int w)
+GAStatistics::scores(std::ostream & os, int w)
 {
     if(w == NoScores)
     {

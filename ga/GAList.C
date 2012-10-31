@@ -1,15 +1,17 @@
-/** @file GAList.C
-  @author Matthew Wall  25-feb-95
+/** 
+  @file GAList.C
+  @brief This defines the templatized list objects.
+  
+  @author Matthew Wall  
+  @date 25-Feb-1995
+  
   Copyright 1995 Massachusetts Institute of Technology
 
- DESCRIPTION:
-  This defines the templatized list objects.
-
- TO DO:
-  Make insert work better with size and depth so not so many recalcs needed.
+  @todo Make insert work better with size and depth so not so many recalcs needed.
   Implement better memory mangement, faster allocation, referencing.
   Use array representation of nodes so we don't have to do so much recursion.
 */
+
 #ifndef _ga_listtmpl_C_
 #define _ga_listtmpl_C_
 

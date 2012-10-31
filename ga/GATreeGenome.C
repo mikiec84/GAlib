@@ -1,11 +1,11 @@
-/** @file GATreeGenome.C
+/** 
+  @file GATreeGenome.C
+  @brief Source file for the tree genome.
+  
   @author Matthew Wall  25-feb-95
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
- DESCRIPTION:
-  Source file for the tree genome.
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved.
 */
+
 #ifndef _ga_tree_C_
 #define _ga_tree_C_
 
@@ -84,7 +84,7 @@ GATreeGenome<T>::copy(const GAGenome & orig)
 /// order we get them in the traversal.  Each coord pair is measured relative to
 /// the parent of the node.
 template <class T> void
-_tt(STD_OSTREAM & os, GANode<T> * n)
+_tt(std::ostream & os, GANode<T> * n)
 {
     if(!n)
     {
@@ -125,7 +125,7 @@ _tt(STD_OSTREAM & os, GANode<T> * n)
 }
 
 template <class T> int
-GATreeGenome<T>::write(STD_OSTREAM & os) const
+GATreeGenome<T>::write(std::ostream & os) const
 {
     os << "node       parent     child      next       prev       contents\n";
     _tt(os, (GANode<T> *)(this->rt));

@@ -1,6 +1,7 @@
 /** 
   @file GABaseGA.h
   @brief   Header for the base genetic algorithm class.
+
   @author Matthew Wall  28-jul-94
 
   Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved.
@@ -156,7 +157,7 @@ public:
     {
         return 0;
     }
-    virtual int write(STD_OSTREAM &) const
+    virtual int write(std::ostream &) const
     {
         return 0;
     }
@@ -164,7 +165,7 @@ public:
     {
         return 0;
     }
-    virtual int read(STD_ISTREAM &)
+    virtual int read(std::istream &)
     {
         return 0;
     }
@@ -195,7 +196,7 @@ public:
     const GAParameterList& parameters(int&, char **, GABoolean flag = gaFalse);
 #ifdef GALIB_USE_STREAMS
     const GAParameterList& parameters(const char* filename, GABoolean f = gaFalse);
-    const GAParameterList& parameters(STD_ISTREAM &, GABoolean flag = gaFalse);
+    const GAParameterList& parameters(std::istream &, GABoolean flag = gaFalse);
 #endif
     virtual int get(const char*, void*) const;
     virtual int setptr(const char*, const void*);

@@ -1,10 +1,13 @@
-/** @file GABinStr.C
-  @author Matthew Wall 30-jun-95
+/** 
+  @file GABinStr.C
+  @brief Source file for the binary string genome.
+  
+  @author Matthew Wall 
+  @date 30-Jun-1995
+  
   Copyright (c) 1995 Massachusetts Institute of Technology
-
- DESCRIPTION:
-  Source file for the binary string genome.
 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,14 +15,15 @@
 #include <ga/GABinStr.h>
 
 
-/**
-BinaryStringGenome
+/** BinaryStringGenome.
+
+ Copy the contents of the bitstream.  We don't care what format it is in -
+ we resize to make sure we have adequate space then we just copy all of the
+ data.
+ 
+ If the original is actually this, then we don't do anything.  If the
+ original is not the same class as this, then we post an error and return.
 */
-/// Copy the contents of the bitstream.  We don't care what format it is in -
-/// we resize to make sure we have adequate space then we just copy all of the
-/// data.
-///   If the original is actually this, then we don't do anything.  If the
-/// original is not the same class as this, then we post an error and return.
 void
 GABinaryString::copy(const GABinaryString& orig)
 {
@@ -32,12 +36,15 @@ GABinaryString::copy(const GABinaryString& orig)
 }
 
 
-/// Resize the bitstream to the specified number of bits.  We return the number
-/// of bits actually allocated.  For now there is no error checking or memory
-/// management - we assume that we'll always get all of the memory we ask for.
-///   If we resize, we copy the previous bits into the new space.  The memory
-/// will never overlap (new should see to that) so we use memcpy not memmove.
-/// If we're making more space, we set the contents of the new space to zeros.
+/** 
+  Resize the bitstream to the specified number of bits.  We return the number
+ of bits actually allocated.  For now there is no error checking or memory
+ management - we assume that we'll always get all of the memory we ask for.
+
+ If we resize, we copy the previous bits into the new space.  The memory
+ will never overlap (new should see to that) so we use memcpy not memmove.
+ If we're making more space, we set the contents of the new space to zeros.
+*/
 int
 GABinaryString::resize(unsigned int x)
 {

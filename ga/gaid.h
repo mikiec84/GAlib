@@ -1,5 +1,5 @@
 /** 
-  @file gaid.h
+  @file GDId.h
   @brief This defines the identifiers for polymorphic classes.
   
   @author Matthew Wall 

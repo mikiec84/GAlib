@@ -1,11 +1,11 @@
 /** 
   @file GAListGenome.h
   @brief This header defines the interface for the list genome.
+
   @author Matthew Wall  
   @date 25-Feb-1995
 
   Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
-
 */
 
 #ifndef _ga_list_h_
@@ -49,7 +49,7 @@ public:
     virtual void copy(const GAGenome &);
 
 #ifdef GALIB_USE_STREAMS
-    virtual int write(STD_OSTREAM &) const;
+    virtual int write(std::ostream &) const;
 #endif
 
     virtual int equal(const GAGenome & c) const;

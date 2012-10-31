@@ -1,6 +1,6 @@
 # -*- Mode: makefile -*-
 
-HDRS= ga.h gaconfig.h gatypes.h gaid.h garandom.h gaerror.h std_stream.h \
+HDRS= ga.h gaconfig.h gatypes.h gaid.h garandom.h gaerror.h \
  GAEvalData.h GAParameter.h GAStatistics.h \
  GABaseGA.h GASStateGA.h GASimpleGA.h GAIncGA.h GADemeGA.h GADCrowdingGA.h \
  GASelector.h GAScaling.h GAPopulation.h GAGenome.h GAMask.h \

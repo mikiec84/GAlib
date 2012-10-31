@@ -1,15 +1,18 @@
-/** @file GABin2DecGenome.C
-  @author Matthew Wall  19-apr-95
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
+/** 
+  @file GABin2DecGenome.C
+  @brief Source file for the binary-to-decimal genome.
+  
+  @author Matthew Wall  
+  @date 19-Apr-1995
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 
- DESCRIPTION:
-  Source file for the binary-to-decimal genome.
   This is the phenotype for converting binary strings to decimal values.  There
 are limits to the size of the numbers you can use (ie you're limited to the
 number of bits that can represent a float - see the converters file for more
 information).
 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -264,7 +267,7 @@ GABin2DecGenome::phenotype(unsigned int n, float val)
 /// Read the incoming data as a list of phenotype values.  It would be nice to
 /// do this either as binary or decimal read, but oh well...  not much need.
 int
-GABin2DecGenome::read(STD_ISTREAM & is)
+GABin2DecGenome::read(std::istream & is)
 {
   float value;
   for(unsigned int i=0; i<phenotypes().nPhenotypes(); i++){
@@ -277,7 +280,7 @@ GABin2DecGenome::read(STD_ISTREAM & is)
 
 
 int
-GABin2DecGenome::write(STD_OSTREAM & os) const
+GABin2DecGenome::write(std::ostream & os) const
 {
   for(unsigned int i=0; i<phenotypes().nPhenotypes(); i++)
     os << phenotype(i) << " ";

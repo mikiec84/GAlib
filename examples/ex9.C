@@ -12,10 +12,11 @@ decimal genome.
 */
 
 #include <stdio.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
-#define cout STD_COUT
+using namespace std;
 
 float objective(GAGenome &);
 

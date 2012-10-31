@@ -1,9 +1,10 @@
 /** 
   @file gaconfig.h
+
   @author Matthew Wall  
   @date 27-Jun-1995
 
-  Copyright (c) 1995-1996 Massachusetts Institute of Technology, all rights reserved
+  Copyright (c) 1995-1996 Massachusetts Institute of Technology, all rights reserved. <br>
   Copyright (c) 1998-2005 Matthew Wall, all rights reserved.
 
  */

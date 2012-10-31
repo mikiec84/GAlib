@@ -1,4 +1,6 @@
-/** @file ga.h 
+/** 
+    @file ga.h 
+
     @author Matthew Wall  
 	@date 28-Jul-1994
 

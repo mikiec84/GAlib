@@ -1,6 +1,8 @@
-/** @file GAListBASE.h
+/** 
+    @file GAListBASE.h
 	@brief This defines the list objects.
-    @author Matthew Wall  
+    
+	@author Matthew Wall  
     @date 25-Nov-1994
 	
   Copyright 1995 Massachusetts Institute of Technology

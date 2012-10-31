@@ -1,10 +1,13 @@
-/** @file GAParameter.C
-  @author Matthew Wall  28-jul-94
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
+/** 
+  @file GAParameter.C
+  @brief Definition of the parameter object and a container list for it.
+  
+  @author Matthew Wall  
+  @date 28-Jul-1994
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 
- DESCRIPTION:
-  Definition of the parameter object and a container list for it.  I did this
+    I did this
 as a separate list implementation because I don't want all of the overhead of
 a fullblown list.  The parameter list is a special purpose, stripped down list
 implementation.
@@ -371,7 +374,7 @@ GAParameterList::operator()(const char* name)
 /// tab delimiter and newline separating pairs.
 ///   If there is an error, return 1, otherwise return 0.
 int
-GAParameterList::write(STD_OSTREAM& os) const
+GAParameterList::write(std::ostream& os) const
 {
     for(unsigned int i = 0; i < n; i++)
     {
@@ -429,7 +432,7 @@ GAParameterList::write(STD_OSTREAM& os) const
 int
 GAParameterList::write(const char* filename) const
 {
-    STD_OFSTREAM outfile(filename, (STD_IOS_OUT | STD_IOS_TRUNC));
+    std::ofstream outfile(filename, (std::ios::out | std::ios::trunc));
 /// should be done this way, but SGI systems (and others?) don't do it right...
 ///  if(! outfile.is_open()){
     if(outfile.fail())
@@ -461,7 +464,7 @@ GAParameterList::write(const char* filename) const
 /// There's no global list to tell us what type things are, and we don't assume.
 ///   We don't allow setting pointers using this method.
 int
-GAParameterList::read(STD_ISTREAM& is, GABoolean flag)
+GAParameterList::read(std::istream& is, GABoolean flag)
 {
     int nfound = 0;
     if(n == 0)
@@ -586,7 +589,7 @@ GAParameterList::read(STD_ISTREAM& is, GABoolean flag)
         strcat(_gaerrbuf2, "be sure there is a newline at end of the file");
         GAErr(GA_LOC, "GAParameterList", "read", _gaerrbuf1, _gaerrbuf2);
 
-        is.clear(STD_IOS_BADBIT | is.rdstate());
+        is.clear(std::ios::badbit | is.rdstate());
     }
 
     return nfound;
@@ -595,7 +598,7 @@ GAParameterList::read(STD_ISTREAM& is, GABoolean flag)
 int
 GAParameterList::read(const char* filename, GABoolean flag)
 {
-    STD_IFSTREAM infile(filename, STD_IOS_IN);
+    std::ifstream infile(filename, std::ios::in);
     if(!infile)
     {
         GAErr(GA_LOC, "GAParameterList", "read", gaErrReadError, filename);

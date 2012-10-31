@@ -1,6 +1,7 @@
 /** 
     @file GAPopulation.h
     @brief  holds an array of pointers to genomes.
+
     @author Matthew Wall  
 	@date 3-Aug-1994
 	
@@ -356,8 +357,8 @@ public:
     }
 
 #ifdef GALIB_USE_STREAMS
-    virtual void read(STD_ISTREAM &) {}
-    virtual void write(STD_OSTREAM & os, SortBasis basis = RAW) const;
+    virtual void read(std::istream &) {}
+    virtual void write(std::ostream & os, SortBasis basis = RAW) const;
 #endif
 
 protected:
@@ -400,12 +401,12 @@ protected:
 
 
 #ifdef GALIB_USE_STREAMS
-inline STD_OSTREAM & operator<< (STD_OSTREAM & os, const GAPopulation & arg)
+inline std::ostream & operator<< (std::ostream & os, const GAPopulation & arg)
 {
     arg.write(os);
     return os;
 }
-inline STD_ISTREAM & operator>> (STD_ISTREAM & is, GAPopulation & arg)
+inline std::istream & operator>> (std::istream & is, GAPopulation & arg)
 {
     arg.read(is);
     return is;

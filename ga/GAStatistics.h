@@ -1,6 +1,8 @@
-/** @file GAStatistics.h  
+/** 
+    @file GAStatistics.h  
     @brief  Header for the statistics object used by the GA objects.
-    @author Matthew Wall  
+    
+	@author Matthew Wall  
 	@date 14-Jul-1995
 
   Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved. 
@@ -165,9 +167,9 @@ public:
 
 #ifdef GALIB_USE_STREAMS
     int scores(const char* filename, int which = NoScores);
-    int scores(STD_OSTREAM & os, int which = NoScores);
+    int scores(std::ostream & os, int which = NoScores);
     int write(const char* filename) const;
-    int write(STD_OSTREAM & os) const;
+    int write(std::ostream & os) const;
 #endif
 
 /// @bug These should be protected (accessible only to the GA class) but for now they
@@ -305,7 +307,7 @@ inline float GAStatistics::current(int w) const
 
 
 #ifdef GALIB_USE_STREAMS
-inline STD_OSTREAM & operator<< (STD_OSTREAM & os, const GAStatistics& s)
+inline std::ostream & operator<< (std::ostream & os, const GAStatistics& s)
 {
     s.write(os);
     return os;

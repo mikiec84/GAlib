@@ -1,11 +1,13 @@
-/** @file GASelector.C
-  @author Matthew Wall  10-aug-94
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
- DESCRIPTION:
-  This file defines the built-in selection objects for GAlib.
+/** 
+  @file GASelector.C
+  @brief This file defines the built-in selection objects for GAlib.
+  
+  @author Matthew Wall  
+  @date 10-Aug-1994
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved
 */
+
 #include <ga/gaconfig.h>
 #include <ga/GAPopulation.h>
 #include <ga/GAGenome.h>

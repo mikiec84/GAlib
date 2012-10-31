@@ -1,11 +1,12 @@
-/** @file GA2DArrayGenome.C
-  @author Matthew Wall  25-feb-95
-  Copyright (c) 1995 Massachusetts Institute of Technology
-                     all rights reserved
-
- DESCRIPTION:
-  Source file for the 2D array genome.
+/** 
+  @file GA2DArrayGenome.C
+  @brief   Source file for the 2D array genome.
+  
+  @author Matthew Wall  25-Feb-1995
+  
+  Copyright (c) 1995 Massachusetts Institute of Technology, all rights reserved.
 */
+
 #ifndef _ga_array2_C_
 #define _ga_array2_C_
 
@@ -172,7 +173,7 @@ GA2DArrayGenome<T>::resize(int w, int h)
 
 #ifdef GALIB_USE_STREAMS
 template <class T> int
-GA2DArrayGenome<T>::read(STD_ISTREAM &)
+GA2DArrayGenome<T>::read(std::istream &)
 {
     GAErr(GA_LOC, className(), "read", gaErrOpUndef);
     return 1;
@@ -180,7 +181,7 @@ GA2DArrayGenome<T>::read(STD_ISTREAM &)
 
 
 template <class T> int
-GA2DArrayGenome<T>::write(STD_OSTREAM & os) const
+GA2DArrayGenome<T>::write(std::ostream & os) const
 {
     for(unsigned int j = 0; j < ny; j++)
     {
@@ -477,13 +478,13 @@ GA2DArrayAlleleGenome<T>::resize(int x, int y)
 
 #ifdef GALIB_USE_STREAMS
 template <class T> int
-GA2DArrayAlleleGenome<T>::read(STD_ISTREAM& is)
+GA2DArrayAlleleGenome<T>::read(std::istream& is)
 {
     return GA2DArrayGenome<T>::read(is);
 }
 
 template <class T> int
-GA2DArrayAlleleGenome<T>::write(STD_OSTREAM& os) const
+GA2DArrayAlleleGenome<T>::write(std::ostream& os) const
 {
     return GA2DArrayGenome<T>::write(os);
 }

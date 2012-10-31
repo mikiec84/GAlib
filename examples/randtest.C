@@ -1,5 +1,6 @@
 /** 
   @file randtest.C
+
   @brief Program to test the random number generator in GAlib.
   @author Matthew Wall
   @date 9-May-1998
@@ -8,11 +9,13 @@
 */
 #include <string.h>
 #include <math.h>
+#include <iostream>
+#include <fstream>
 #include <ga/garandom.h>
 #include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define cerr STD_CERR
+#define cout std::cout
+#define cerr std::cerr
 
 static const int HIST_SIZE = 501;
 static const int NFLIPS = 10000;

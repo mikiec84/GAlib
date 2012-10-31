@@ -10,10 +10,12 @@ stopping criterion for the GA rather than number-of-generations.
 */
 #include <stdio.h>
 #include <math.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
 #include <ga/std_stream.h>
 
-#define cout STD_COUT
+using namespace std;
 
 float objective(GAGenome &);
 

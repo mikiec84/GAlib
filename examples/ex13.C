@@ -21,12 +21,12 @@ sparse.
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <iostream>
+#include <fstream>
 #include <ga/ga.h>
 #include <ga/std_stream.h>
 
-#define cout STD_COUT
-#define cerr STD_CERR
-#define ifstream STD_IFSTREAM
+using namespace std;
 
 typedef struct _UserData
 {
