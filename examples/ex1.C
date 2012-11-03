@@ -22,7 +22,6 @@ function.  But it does work.
 #include <fstream>
 #include <ga/GASimpleGA.h>	// we're going to use the simple GA
 #include <ga/GA2DBinStrGenome.h> // and the 2D binary string genome
-#include <ga/std_stream.h>
 
 using namespace std;
 

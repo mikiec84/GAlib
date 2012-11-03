@@ -16,7 +16,6 @@ the command line.
 #include <iostream>
 #include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
 using namespace std;
 

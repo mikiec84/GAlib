@@ -25,7 +25,6 @@ algorithm object.
 #include <fstream>
 #include <ga/GASStateGA.h>	// include the steady-state GA header
 #include <ga/GA3DBinStrGenome.h> // and the header for the genome we'll use
-#include <ga/std_stream.h>
 
 using namespace std;
 

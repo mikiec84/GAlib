@@ -20,7 +20,6 @@ objective function.
 #include <fstream>
 #include <ga/GASimpleGA.h>
 #include <ga/GABin2DecGenome.h>
-#include <ga/std_stream.h>
 
 using namespace std;
 

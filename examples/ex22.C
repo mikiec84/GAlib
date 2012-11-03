@@ -23,7 +23,7 @@ child crossover" you could use your own crossover algorithm instead.
 #include <fstream>
 #include <ga/ga.h>
 
-using namespaced std;
+using namespace std;
 
 // force instantiations for compilers that do not do auto instantiation
 // for some compilers (e.g. metrowerks) this must come after any

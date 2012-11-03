@@ -19,7 +19,6 @@ create the array determines which behaviour you'll get.
 #include <iostream>
 #include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
 using namespace std;
 

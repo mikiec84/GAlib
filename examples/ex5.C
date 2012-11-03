@@ -26,7 +26,6 @@ override-able on any instance of the new genome.
 #include <ga/GABin2DecGenome.h>
 #include <ga/GA2DBinStrGenome.h>
 #include <ga/GASStateGA.h>
-#include <ga/std_stream.h>
 
 using namespace std;
 

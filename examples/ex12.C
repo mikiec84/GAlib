@@ -13,9 +13,6 @@
 #include <iostream>
 #include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
-
-using namespace std;
 
 #define INSTANTIATE_STRING_GENOME
 #include <ga/GAStringGenome.h>
@@ -29,6 +26,7 @@ float objective(GAGenome &);
 // that will be used in this example.
 void AlphabetInitializer(GAGenome &);
 
+using namespace std;
 
 int
 main(int argc, char *argv[])

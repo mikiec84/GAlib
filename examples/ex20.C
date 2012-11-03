@@ -19,7 +19,6 @@ example - not good programming style, but it gets the job done.
 #include <iostream>
 #include <fstream>
 #include <ga/ga.h>
-#include <ga/std_stream.h>
 
 using std::cout;
 
